@@ -1,0 +1,398 @@
+$color_blue: #4B4D66
+$color_yellow: #EED788
+$color_water: #6A97B4
+$color_grey: #E3E5F2
+$color_water_dark: #66879C
+$color_white: #eee
+$title_size: 33px
+$subtitle_size: 23px
+$text_size: 16px
+$sub_size: 14px
+
+*
+    position: relative
+    font-size: $text_size
+    box-sizing: border-box
+    font-weight: 400
+    font-family: 'Open Sans', sans-serif, 黑體, "微軟正黑體"
+    //debug
+    //border: solid 1px black
+    //profolio
+html,body
+    width: 100%
+    height: 100%
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+    width: 100%
+    height: 100%
+    transition-duration: 0.3s
+
+h1,h2
+    font-size: $title_size
+h3,h4
+    font-size: $subtitle_size
+p
+    font-size: $text_size
+h2
+    text-align: center
+    padding-bottom: 6px
+    &:after
+        content: ""
+        position: absolute
+        bottom: -5px
+        left: 50%
+        height: 5px
+        width: 80px
+        transform: translateX(-50%)
+    
+#navbar
+    position: fixed
+    z-index: 100
+    top: 0
+    width: 100%
+    max-width: 100%
+    padding: 2px 30px
+    border-bottom: solid 1px $color_blue
+    color: $color_blue
+    vertical-align: bottom
+    transition-duration: 0.5s
+    .navbar-mid
+        max-width: 1280px
+.nav_icon
+    width: 40px
+    height: 40px
+    margin-top: 1px
+    margin-right: 10px
+    display: none
+    cursor: pointer
+    .line1, .line2, .line3
+        position: absolute
+        width: 30px
+        height: 2px
+        background-color: $color_blue
+        transition-duration: 0.3s
+        top: 50%
+        left: 50%
+    .line1
+        transform: translate(-50%,450%)
+    .line2
+        transform: translate(-50%,0%)
+    .line3
+        transform: translate(-50%,-450%)
+    &.active
+        .line1
+            transform: translate(-50%,-50%) rotate(-45deg)
+        .line2
+            transform: translate(-50%,-50%) rotate(-45deg)
+        .line3
+            transform: translate(-50%,-50%) rotate(45deg)
+    &.leavetop
+        .line1, .line2, .line3
+            background-color: $color_blue
+            
+.brand
+    display: inline-block
+    padding: 5px 20px
+    font-size: $subtitle_size
+    cursor: pointer
+    a
+        font-size: $subtitle_size
+        color: $color_blue
+    &:hover
+        a
+            color: $color_yellow
+.nav_top
+    float: right
+    display: inline-block
+    padding-top: 10px
+    background-color: transparent
+    ul
+        font-size: 0
+        margin: 0
+        list-style: none
+    
+.nav_item
+    font-size: initial
+    display: inline-block
+    padding: 0px 15px
+    
+    border-right: solid 1px $color_blue
+    a
+        color: $color_blue
+    &:hover
+        a
+            color: $color_yellow
+    &:last-of-type
+        border-right: solid 0px $color_grey
+    
+                
+#navbar.leavetop
+    color: $color_blue
+    border-bottom: solid 1px rgba($color_blue,0.6)
+    background-color: rgba($color_grey,0.6)
+.nav_item.leavetop
+    border-color: $color_blue
+.nav_link.leavetop
+    color: $color_blue
+.nav_top.leavetop
+    background-color: rgba($color_grey,0.6)
+    border-color: rgba($color_blue,0.6)
+
+.container
+    width: 100%
+    max-width: 1280px
+    font-size: 0px
+    
+.img_wrap,.text_wrap
+    vertical-align: middle
+    font-size: initial
+    display: inline-block
+ 
+section
+    width: 100%
+    min-height: 100%
+    padding-top: 40px
+    padding-bottom: 10px
+
+section#main_profolio
+    background-color: $color_grey
+    color: $color_blue
+    h2
+        color: $color_water
+        &:after
+            background-color: $color_water
+    .container
+        width: 100%
+        max-width: 900px
+        padding: 30px 0
+        
+        margin-bottom: 30px
+        position: relative
+        top: 0%
+        left: 50%
+        transform: translate(-50%,0)
+        text-align-last: auto
+        .img_wrap
+            text-align: left
+            margin: 0.5%
+            max-width: 300px
+            width: 32%
+            height: 250px
+            cursor: pointer
+            border: solid 10px $color_blue
+            transition-duration: 0.5s
+            background: $color_water center center/cover no-repeat
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.3)
+            a
+                position: absolute
+                z-index: 10
+                width: 100%
+                height: 100%
+            .black_mask
+                width: 100%
+                height: 100%
+                opacity: 0
+                background-color: black
+                transition-duration: 0.5s
+                
+            .info_wrap
+                position: absolute
+                width: 80%
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-40%)
+                transition-duration: 0.5s
+                h3,p
+                    opacity: 0
+                    text-align: center
+                    color: $color_white
+                    margin: 5px
+                    transition-duration: 0.5s       
+            &:hover
+                transform: translate(-5px,-5px)
+                box-shadow: 8px 8px 9px rgba(0,0,0,0.1)
+                .black_mask
+                    opacity: 0.4
+                .info_wrap
+                    transform: translate(-50%,-50%)
+                h3,p
+                    opacity: 1
+    #pro-img1
+        background-image: url("../images/ian_pro_img1.png")
+    #pro-img2
+        background-image: url("../images/ian_pro_img2.png")
+    #pro-img3
+        background-image: url("../images/ian_pro_img3.png")
+    #pro-img4
+        background-image: url("../images/ian_pro_img4.png")
+    #pro-img5
+        background-image: url("../images/ian_pro_img5.png")
+    #pro-img6
+        background-image: url("../images/ian_pro_img6.png")
+
+section#page_profolio
+    background-color: $color_grey
+    color: $color_blue
+    h2
+        color: $color_water
+        &:after
+            background-color: $color_water
+    .container
+        width: 100%
+        max-width: 930px
+        padding: 30px
+        margin-bottom: 30px
+        position: relative
+        top: 0%
+        left: 50%
+        transform: translate(-50%,0)
+        text-align-last: auto
+        img
+            width: 100%
+            margin-bottom: 10px
+        .bread
+            position: absolute
+            left: 30px
+            top: -10px
+            a
+                color: $color_water
+                &:before
+                    content: "<<"
+                    position: relative
+                    transition-duration: 0.3s
+                    left: 0
+            &:hover
+                a
+                    color: $color_blue
+                    &:before
+                        left: -5px
+        .more
+            position: relative
+            left: 50%
+            display: inline-block
+            border: solid 1px $color_blue
+            margin: 20px 0
+            padding: 5px 10px
+            font-size: $text_size
+            transform: translateX(-50%)
+            transition-duration: 0.3s
+            a
+                color: $color_blue
+            &:hover
+                background-color: $color_blue
+                a
+                    color: $color_grey
+        .img_wrap
+            border: 6px solid $color_white
+            border-radius: 4px
+            background-size: cover
+            background-position: center
+            width: 100%
+            height: 300px
+            
+            
+#pro-1
+    .img_wrap
+        background-image: url("../images/pro_1.png")
+#pro-2
+    .img_wrap
+        background-image: url("../images/pro_2.png")
+#pro-3
+    .img_wrap
+        background-image: url("../images/pro_3.png")
+#pro-4
+    .img_wrap
+        background-image: url("../images/pro_4.png")
+#pro-5
+    .img_wrap
+        background-image: url("../images/pro_5.png")
+#pro-6
+    .img_wrap
+        background-image: url("../images/pro_6.png")
+
+        
+        
+footer
+    position: absolute
+    width: 100%
+    max-width: 100%
+    bottom: 0
+    padding: 15px 30px
+    color: $color_grey
+    background-color: $color_water
+    p
+        margin: 0
+        padding: 0 10px
+        font-size: $sub_size
+        max-width: 1280px
+    .backtop
+        width: 50px
+        height: 50px
+        position: absolute
+        right: 30px
+        top: 0px
+        transform: translate(0,-50%)
+        background-color: $color_blue
+        color: $color_grey
+        text-align: center
+        line-height: 50px
+        cursor: pointer
+        border-radius: 50%
+        transition-duration: 0.3s
+        &:hover
+            background-color: $color_yellow
+            color: $color_blue
+
+@media screen and (max-width: 768px)
+    #navbar
+        padding: 2px 5px
+    .nav_icon
+        float: right
+        display: inline-block
+        padding-top: 0px
+    .nav_top
+        position: absolute
+        padding-top: 0px
+        border: solid 1px $color_blue
+        right: 0
+        top: 44px
+        display: none
+        ul
+            padding: 0
+    .nav_item
+        font-size: initial
+        padding: 10px 30px
+        border: 0px
+        margin: 5px 0
+        display: block
+        color: $color_grey
+        text-align: left
+        transition-duration: 0.3s
+    section
+        min-height: auto
+        padding-bottom: 50px
+    .container
+        padding: 0px 10px
+        top: 0
+        left: 0
+        position: relative
+        transform: translate(0,0)
+    section#main_profolio
+        .container
+            .img_wrap
+                margin: 10px
+                padding: 0 0px
+                width: 96%
+                max-width: 96%
+                height: 300px
+                .black_mask
+                    opacity: 0.4
+                .info_wrap
+                    h3,p
+                        opacity: 1
+    section#page_profolio
+        .container
+            padding: 10px

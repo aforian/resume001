@@ -1,0 +1,664 @@
+@charset "UTF-8";
+/* line 12, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+* {
+  position: relative;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif, 黑體, "微軟正黑體"; }
+
+/* line 22, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+/* line 28, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.5s; }
+
+/* line 34, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+h1, h2 {
+  font-size: 33px; }
+
+/* line 36, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+h3, h4 {
+  font-size: 23px; }
+
+/* line 38, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+p {
+  font-size: 16px; }
+
+/* line 40, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+h2 {
+  text-align: center;
+  padding-bottom: 6px; }
+  /* line 43, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  h2:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    height: 5px;
+    width: 80px;
+    transform: translateX(-50%); }
+
+/* line 52, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+#navbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 2px 30px;
+  border-bottom: solid 1px #E3E5F2;
+  color: #eee;
+  vertical-align: bottom;
+  transition-duration: 0.5s; }
+  /* line 63, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  #navbar .navbar-mid {
+    max-width: 1280px; }
+
+/* line 65, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+.nav_icon {
+  width: 40px;
+  height: 40px;
+  margin-top: 1px;
+  margin-right: 10px;
+  display: none;
+  cursor: pointer; }
+  /* line 72, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_icon .line1, .nav_icon .line2, .nav_icon .line3 {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #E3E5F2;
+    transition-duration: 0.3s;
+    top: 50%;
+    left: 50%; }
+  /* line 80, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_icon .line1 {
+    transform: translate(-50%, 450%); }
+  /* line 82, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_icon .line2 {
+    transform: translate(-50%, 0%); }
+  /* line 84, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_icon .line3 {
+    transform: translate(-50%, -450%); }
+  /* line 87, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_icon.active .line1 {
+    transform: translate(-50%, -50%) rotate(-45deg); }
+  /* line 89, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_icon.active .line2 {
+    transform: translate(-50%, -50%) rotate(-45deg); }
+  /* line 91, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_icon.active .line3 {
+    transform: translate(-50%, -50%) rotate(45deg); }
+  /* line 94, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_icon.leavetop .line1, .nav_icon.leavetop .line2, .nav_icon.leavetop .line3 {
+    background-color: #4B4D66; }
+
+/* line 97, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+.brand {
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 23px;
+  cursor: pointer; }
+  /* line 102, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .brand a {
+    font-size: 23px;
+    color: #E3E5F2; }
+  /* line 106, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .brand:hover a {
+    color: #EED788; }
+
+/* line 108, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+.nav_top {
+  float: right;
+  display: inline-block;
+  padding-top: 10px;
+  background-color: transparent; }
+  /* line 113, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_top ul {
+    font-size: 0;
+    margin: 0;
+    list-style: none; }
+
+/* line 118, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+.nav_item {
+  font-size: initial;
+  display: inline-block;
+  padding: 0px 15px;
+  border-right: solid 1px #E3E5F2; }
+  /* line 124, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_item a {
+    color: #E3E5F2; }
+  /* line 127, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_item:hover a {
+    color: #EED788; }
+  /* line 129, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_item:last-of-type {
+    border-right: solid 0px #E3E5F2; }
+
+/* line 133, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+#navbar.leavetop {
+  color: #4B4D66;
+  border-bottom: solid 1px rgba(75, 77, 102, 0.6);
+  background-color: rgba(227, 229, 242, 0.6); }
+
+/* line 137, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+.nav_item.leavetop {
+  border-color: #4B4D66; }
+
+/* line 139, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+.nav_link.leavetop {
+  color: #4B4D66; }
+
+/* line 141, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+.nav_top.leavetop {
+  background-color: rgba(227, 229, 242, 0.6);
+  border-color: rgba(75, 77, 102, 0.6); }
+
+/* line 145, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  font-size: 0px; }
+
+/* line 155, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+.img_wrap, .text_wrap {
+  vertical-align: middle;
+  font-size: initial;
+  display: inline-block; }
+
+/* line 160, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+.next-page {
+  position: absolute;
+  width: 80px;
+  bottom: 0;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, 0);
+  animation: explore_move 1s infinite ease-in-out;
+  opacity: 1;
+  transition-duration: 1s;
+  cursor: pointer; }
+  /* line 171, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .next-page span {
+    font-size: 14px; }
+  /* line 173, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .next-page img {
+    width: 30px; }
+  /* line 175, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .next-page.leavetop {
+    opacity: 0; }
+
+@keyframes explore_move {
+  0% {
+    transform: translate(-50%, -20px); }
+  80% {
+    transform: translate(-50%, 0px); }
+  100% {
+    transform: translate(-50%, 0px); } }
+
+/* line 187, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+section {
+  width: 100%;
+  min-height: 100%;
+  padding-top: 40px;
+  padding-bottom: 10px; }
+
+/* line 193, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+section#section_home {
+  background-color: #4B4D66;
+  color: #E3E5F2; }
+  /* line 196, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_home .container {
+    transform: translate(-50%, -50%); }
+    /* line 198, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_home .container .img_wrap {
+      padding: 30px 0;
+      width: 60%;
+      perspective: 600;
+      -webkit-perspective: 600;
+      perspective-origin: 30% center;
+      -webkit-perspective-origin: 30% center; }
+      /* line 205, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_home .container .img_wrap img {
+        width: 50%;
+        opacity: 0; }
+      /* line 208, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_home .container .img_wrap .home_img {
+        position: absolute;
+        top: 50%;
+        width: 30%;
+        text-align: center;
+        transform: rotateY(-60deg) translateY(-50%); }
+        /* line 214, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+        section#section_home .container .img_wrap .home_img img {
+          width: 100%;
+          opacity: 1;
+          transition-duration: 0.5s;
+          box-shadow: 0px 0px 4px rgba(227, 229, 242, 0.3); }
+        /* line 219, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+        section#section_home .container .img_wrap .home_img span {
+          position: absolute;
+          bottom: -25px;
+          right: 0;
+          font-size: 14px;
+          letter-spacing: 5px;
+          opacity: 0;
+          transition-duration: 0.5s;
+          transform: translate(30px, -10px); }
+        /* line 229, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+        section#section_home .container .img_wrap .home_img:hover img {
+          transform: translateX(30px) scale(1.1); }
+        /* line 231, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+        section#section_home .container .img_wrap .home_img:hover span {
+          transform: translate(30px, 0px);
+          opacity: 1; }
+      /* line 234, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_home .container .img_wrap #home_img1 {
+        z-index: 10;
+        left: 15%; }
+      /* line 237, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_home .container .img_wrap #home_img2 {
+        z-index: 9;
+        left: 30%; }
+      /* line 240, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_home .container .img_wrap #home_img3 {
+        z-index: 8;
+        left: 45%; }
+    /* line 243, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_home .container .text_wrap {
+      width: 40%;
+      padding: 10px; }
+    /* line 246, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_home .container h1 {
+      color: #EED788;
+      font-size: 40px;
+      margin-bottom: 0;
+      letter-spacing: 2px; }
+    /* line 251, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_home .container p {
+      margin-top: 0;
+      letter-spacing: 3px; }
+
+/* line 255, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+section#section_intro {
+  background-color: #EED788;
+  color: #4B4D66; }
+  /* line 258, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_intro h2 {
+    color: #4B4D66; }
+    /* line 260, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_intro h2:after {
+      background-color: #4B4D66; }
+  /* line 262, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_intro .container {
+    transform: translate(-50%, -40%); }
+    /* line 264, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_intro .container .text_wrap {
+      width: 70%;
+      padding: 0px 80px; }
+      /* line 267, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_intro .container .text_wrap h3 {
+        margin-bottom: 5px; }
+      /* line 269, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_intro .container .text_wrap p {
+        margin-top: 0;
+        margin-bottom: 5px;
+        text-indent: 34px; }
+    /* line 273, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_intro .container .img_wrap {
+      width: 30%;
+      padding: 5%; }
+      /* line 276, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_intro .container .img_wrap img {
+        width: 90%;
+        border-radius: 50%; }
+
+/* line 280, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+section#section_profolio {
+  background-color: #E3E5F2;
+  color: #4B4D66; }
+  /* line 283, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_profolio h2 {
+    color: #6A97B4; }
+    /* line 285, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_profolio h2:after {
+      background-color: #6A97B4; }
+  /* line 288, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_profolio .container .more {
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    border: solid 1px #4B4D66;
+    padding: 5px 10px;
+    font-size: 16px;
+    transform: translateX(-50%);
+    transition-duration: 0.3s; }
+    /* line 297, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_profolio .container .more a {
+      color: #4B4D66;
+      transition-duration: 0.3s; }
+      /* line 300, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_profolio .container .more a:after {
+        content: ">>";
+        left: 0px;
+        transition-duration: 0.3s;
+        position: relative; }
+    /* line 306, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_profolio .container .more:hover {
+      background-color: #4B4D66; }
+      /* line 308, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_profolio .container .more:hover a {
+        color: #E3E5F2; }
+        /* line 310, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+        section#section_profolio .container .more:hover a:after {
+          left: 3px; }
+  /* line 312, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_profolio .container .img_wrap {
+    margin: 0px 2%;
+    width: 29%;
+    height: 300px;
+    cursor: pointer;
+    border: solid 10px #4B4D66;
+    transition-duration: 0.5s;
+    background: #6A97B4 center center/cover no-repeat;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
+    /* line 321, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_profolio .container .img_wrap .black_mask {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: black;
+      transition-duration: 0.5s; }
+    /* line 327, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_profolio .container .img_wrap .info_wrap {
+      position: absolute;
+      width: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      transition-duration: 0.5s; }
+      /* line 334, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_profolio .container .img_wrap .info_wrap h3, section#section_profolio .container .img_wrap .info_wrap p {
+        opacity: 0;
+        text-align: center;
+        color: #eee;
+        margin: 5px;
+        transition-duration: 0.5s; }
+    /* line 340, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_profolio .container .img_wrap:hover {
+      transform: translate(-5px, -5px);
+      box-shadow: 8px 8px 9px rgba(0, 0, 0, 0.1); }
+      /* line 343, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_profolio .container .img_wrap:hover .black_mask {
+        opacity: 0.4; }
+      /* line 345, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_profolio .container .img_wrap:hover .info_wrap {
+        transform: translate(-50%, -50%); }
+      /* line 347, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_profolio .container .img_wrap:hover h3, section#section_profolio .container .img_wrap:hover p {
+        opacity: 1; }
+  /* line 349, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_profolio #pro-img1 {
+    background-image: url("../images/ian_pro_img1.png"); }
+  /* line 351, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_profolio #pro-img2 {
+    background-image: url("../images/ian_pro_img2.png"); }
+  /* line 353, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_profolio #pro-img3 {
+    background-image: url("../images/ian_pro_img3.png"); }
+
+/* line 356, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+section#section_skill {
+  background-color: #6A97B4;
+  color: #E3E5F2; }
+  /* line 359, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_skill h2 {
+    color: #4B4D66; }
+    /* line 361, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_skill h2:after {
+      background-color: #4B4D66; }
+  /* line 363, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_skill h5 {
+    margin: 10px;
+    font-size: 23px; }
+  /* line 366, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_skill .container {
+    transform: translate(-50%, -40%); }
+  /* line 368, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_skill .img_wrap {
+    vertical-align: middle;
+    width: 50%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    background-size: 100%;
+    background-position: center center;
+    font-size: 0; }
+    /* line 376, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_skill .img_wrap img {
+      vertical-align: middle;
+      padding: 0 3px;
+      width: 35%;
+      display: inline-block; }
+    /* line 381, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_skill .img_wrap .text_wrap {
+      vertical-align: middle;
+      width: 65%;
+      padding: 0px 10px; }
+      /* line 385, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_skill .img_wrap .text_wrap:first-child {
+        text-align: right; }
+        /* line 387, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+        section#section_skill .img_wrap .text_wrap:first-child h5:after {
+          content: "．"; }
+      /* line 389, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_skill .img_wrap .text_wrap:last-child {
+        text-align: left; }
+        /* line 391, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+        section#section_skill .img_wrap .text_wrap:last-child h5:before {
+          content: "．"; }
+    /* line 393, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_skill .img_wrap:first-child:hover {
+      transform: scale(1.1) translateX(-5%); }
+    /* line 395, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_skill .img_wrap:last-child:hover {
+      transform: scale(1.1) translateX(5%); }
+
+/* line 398, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+section#section_contact {
+  background-color: #EED788;
+  color: #66879C; }
+  /* line 401, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_contact h2 {
+    color: #4B4D66; }
+    /* line 403, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_contact h2:after {
+      background-color: #4B4D66; }
+  /* line 405, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_contact h5 {
+    margin: 10px;
+    font-size: 23px; }
+  /* line 408, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_contact .container {
+    transform: translate(-50%, -50%); }
+  /* line 410, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_contact .img_wrap {
+    width: 40%;
+    padding: 0 30px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    background-size: 100%;
+    background-position: center center; }
+    /* line 417, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_contact .img_wrap img {
+      width: 100%; }
+  /* line 419, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_contact .text_wrap {
+    width: 60%;
+    padding-left: 10%; }
+
+/* line 423, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+footer {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  bottom: 0;
+  padding: 15px 30px;
+  color: #E3E5F2;
+  background-color: #6A97B4; }
+  /* line 431, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  footer p {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 14px;
+    max-width: 1280px; }
+  /* line 436, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  footer .backtop {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 30px;
+    top: 0px;
+    transform: translate(0, -50%);
+    background-color: #4B4D66;
+    color: #E3E5F2;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition-duration: 0.3s; }
+    /* line 450, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    footer .backtop:hover {
+      background-color: #EED788;
+      color: #4B4D66; }
+
+@media screen and (max-width: 768px) {
+  /* line 463, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  #navbar {
+    padding: 2px 5px; }
+  /* line 465, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_icon {
+    float: right;
+    display: inline-block;
+    padding-top: 0px; }
+  /* line 469, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_top {
+    position: absolute;
+    padding-top: 0px;
+    border: solid 1px #E3E5F2;
+    right: 0;
+    top: 44px;
+    display: none; }
+    /* line 476, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    .nav_top ul {
+      padding: 0; }
+  /* line 478, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .nav_item {
+    font-size: initial;
+    padding: 10px 30px;
+    border: 0px;
+    margin: 5px 0;
+    display: block;
+    color: #E3E5F2;
+    text-align: left;
+    transition-duration: 0.3s; }
+  /* line 487, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section {
+    min-height: auto;
+    padding-bottom: 50px; }
+  /* line 490, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  .container {
+    padding: 0px 10px;
+    top: 0;
+    left: 0;
+    position: relative;
+    transform: translate(0, 0); }
+  /* line 496, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_home {
+    min-height: 100%; }
+    /* line 498, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_home .container {
+      transform: translate(0, 0); }
+      /* line 500, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_home .container .img_wrap {
+        width: 100%;
+        left: -5%;
+        transform: translate(0, 90%); }
+        /* line 504, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+        section#section_home .container .img_wrap .home_img {
+          width: 40%; }
+          /* line 506, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+          section#section_home .container .img_wrap .home_img span {
+            transform: translate(0px, 0px);
+            opacity: 1; }
+      /* line 509, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_home .container .text_wrap {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        transform: translate(0, -90%); }
+  /* line 515, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_intro .container {
+    transform: translate(0, 0); }
+    /* line 517, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_intro .container .text_wrap {
+      width: 100%;
+      padding: 0px 10px; }
+    /* line 520, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_intro .container .img_wrap {
+      width: 100%;
+      padding: 10%; }
+      /* line 523, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+      section#section_intro .container .img_wrap img {
+        width: 100%; }
+  /* line 527, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_profolio .container .img_wrap {
+    margin: 3%;
+    padding: 0 0px;
+    width: 96%;
+    height: 300px; }
+    /* line 532, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_profolio .container .img_wrap .black_mask {
+      opacity: 0.4; }
+    /* line 535, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_profolio .container .img_wrap .info_wrap h3, section#section_profolio .container .img_wrap .info_wrap p {
+      opacity: 1; }
+  /* line 538, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_skill .container {
+    transform: translate(0, 0); }
+  /* line 540, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_skill .img_wrap {
+    vertical-align: top;
+    width: 100%; }
+    /* line 543, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_skill .img_wrap img {
+      width: 40%; }
+    /* line 545, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_skill .img_wrap .text_wrap {
+      width: 60%; }
+  /* line 548, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+  section#section_contact .container {
+    transform: translate(0, 0); }
+    /* line 550, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_contact .container .text_wrap {
+      width: 100%;
+      padding: 20px; }
+    /* line 553, /Users/mac/Desktop/2017web/webfile/sass/print.sass */
+    section#section_contact .container .img_wrap {
+      width: 100%;
+      padding: 20px; } }
+
+/*# sourceMappingURL=print.css.map */
