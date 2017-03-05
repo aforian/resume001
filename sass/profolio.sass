@@ -1,3 +1,5 @@
+@import compass/css3
+
 $color_blue: #4B4D66
 $color_yellow: #EED788
 $color_water: #6A97B4
@@ -9,15 +11,27 @@ $subtitle_size: 23px
 $text_size: 16px
 $sub_size: 14px
 
+@mixin ab_center
+    position: absolute
+    top: 50%
+    left: 50%
+    +transform(translate(-50%,-50%))
+        
+@mixin ab_centerX
+    position: absolute
+    left: 50%
+    +transform(translateX(-50%))
+
 *
     position: relative
     font-size: $text_size
-    box-sizing: border-box
     font-weight: 400
     font-family: 'Open Sans', sans-serif, 黑體, "微軟正黑體"
+    +box-sizing(border-box)
     //debug
     //border: solid 1px black
     //profolio
+
 html,body
     width: 100%
     height: 100%
@@ -28,7 +42,7 @@ a
     text-decoration: none
     width: 100%
     height: 100%
-    transition-duration: 0.3s
+    +transition(0.3s)
 
 h1,h2
     font-size: $title_size
@@ -41,16 +55,14 @@ h2
     padding-bottom: 6px
     &:after
         content: ""
-        position: absolute
-        bottom: -5px
-        left: 50%
-        height: 5px
         width: 80px
-        transform: translateX(-50%)
+        height: 5px
+        bottom: -5px
+        +ab_centerX
     
 #navbar
-    position: fixed
     z-index: 100
+    position: fixed
     top: 0
     width: 100%
     max-width: 100%
@@ -58,7 +70,7 @@ h2
     border-bottom: solid 1px $color_blue
     color: $color_blue
     vertical-align: bottom
-    transition-duration: 0.5s
+    +transition(0.3s)
     .navbar-mid
         max-width: 1280px
 .nav_icon
@@ -68,27 +80,26 @@ h2
     margin-right: 10px
     display: none
     cursor: pointer
-    .line1, .line2, .line3
-        position: absolute
+    nav_line
+        +ab_center
         width: 30px
         height: 2px
         background-color: $color_blue
-        transition-duration: 0.3s
-        top: 50%
-        left: 50%
+        +transition(0.3s)
     .line1
-        transform: translate(-50%,450%)
+        +transform(translate(-50%,450%))
+        @extend nav_line
     .line2
-        transform: translate(-50%,0%)
+        +transform(translate(-50%,0%))
+        @extend nav_line
     .line3
-        transform: translate(-50%,-450%)
+        +transform(translate(-50%,-450%))
+        @extend nav_line
     &.active
-        .line1
-            transform: translate(-50%,-50%) rotate(-45deg)
-        .line2
-            transform: translate(-50%,-50%) rotate(-45deg)
+        .line1,.line2
+            +transform(translate(-50%,-50%) rotate(-45deg))
         .line3
-            transform: translate(-50%,-50%) rotate(45deg)
+            +transform(translate(-50%,-50%) rotate(45deg))
     &.leavetop
         .line1, .line2, .line3
             background-color: $color_blue
@@ -118,17 +129,15 @@ h2
     font-size: initial
     display: inline-block
     padding: 0px 15px
-    
     border-right: solid 1px $color_blue
     a
         color: $color_blue
     &:hover
         a
             color: $color_yellow
-    &:last-of-type
+    &:last-child
         border-right: solid 0px $color_grey
-    
-                
+        
 #navbar.leavetop
     color: $color_blue
     border-bottom: solid 1px rgba($color_blue,0.6)
@@ -165,27 +174,26 @@ section#main_profolio
         &:after
             background-color: $color_water
     .container
-        width: 100%
-        max-width: 900px
-        padding: 30px 0
-        
-        margin-bottom: 30px
         position: relative
         top: 0%
         left: 50%
-        transform: translate(-50%,0)
-        text-align-last: auto
+        +transform(translate(-50%,0))
+        width: 100%
+        max-width: 900px
+        padding: 30px 0
+        margin-bottom: 30px
         .img_wrap
-            text-align: left
+            position: relative
             margin: 0.5%
             max-width: 300px
             width: 32%
             height: 250px
+            text-align: left
             cursor: pointer
             border: solid 10px $color_blue
-            transition-duration: 0.5s
+            +transition-duration(0.3s)
             background: $color_water center center/cover no-repeat
-            box-shadow: 3px 3px 5px rgba(0,0,0,0.3)
+            +box-shadow(3px 3px 5px rgba(0,0,0,0.3))
             a
                 position: absolute
                 z-index: 10
@@ -194,32 +202,31 @@ section#main_profolio
             .black_mask
                 width: 100%
                 height: 100%
-                opacity: 0
                 background-color: black
-                transition-duration: 0.5s
-                
+                +opacity(0)
+                +transition(0.5s)
             .info_wrap
                 position: absolute
                 width: 80%
                 top: 50%
                 left: 50%
-                transform: translate(-50%,-40%)
-                transition-duration: 0.5s
+                +transform(translate(-50%,-40%))
+                +transition(0.5s)
                 h3,p
-                    opacity: 0
+                    +opacity(0)
                     text-align: center
                     color: $color_white
                     margin: 5px
-                    transition-duration: 0.5s       
+                    +transition(0.5s)       
             &:hover
-                transform: translate(-5px,-5px)
-                box-shadow: 8px 8px 9px rgba(0,0,0,0.1)
+                +transform(translate(-5px,-5px))
+                +box-shadow(8px 8px 9px rgba(0,0,0,0.1))
                 .black_mask
-                    opacity: 0.4
+                    +opacity(0.4)
                 .info_wrap
-                    transform: translate(-50%,-50%)
+                    +transform(translate(-50%,-50%))
                 h3,p
-                    opacity: 1
+                    +opacity(1)
     #pro-img1
         background-image: url("../images/ian_pro_img1.png")
     #pro-img2
@@ -245,11 +252,9 @@ section#page_profolio
         max-width: 930px
         padding: 30px
         margin-bottom: 30px
-        position: relative
+        +ab_centerX
         top: 0%
-        left: 50%
-        transform: translate(-50%,0)
-        text-align-last: auto
+        position: relative
         img
             width: 100%
             margin-bottom: 10px
@@ -262,8 +267,8 @@ section#page_profolio
                 &:before
                     content: "<<"
                     position: relative
-                    transition-duration: 0.3s
                     left: 0
+                    +transition(0.3s)
             &:hover
                 a
                     color: $color_blue
@@ -277,8 +282,8 @@ section#page_profolio
             margin: 20px 0
             padding: 5px 10px
             font-size: $text_size
-            transform: translateX(-50%)
-            transition-duration: 0.3s
+            +transform(translateX(-50%))
+            +transition(0.3s)
             a
                 color: $color_blue
             &:hover
@@ -286,34 +291,25 @@ section#page_profolio
                 a
                     color: $color_grey
         .img_wrap
-            border: 6px solid $color_white
-            border-radius: 4px
-            background-size: cover
-            background-position: center
             width: 100%
             height: 300px
+            border: 6px solid $color_white
+            +border-radius(4px)
+            background-size: cover
+            background-position: center
             
-            
-#pro-1
-    .img_wrap
-        background-image: url("../images/pro_1.png")
-#pro-2
-    .img_wrap
-        background-image: url("../images/pro_2.png")
-#pro-3
-    .img_wrap
-        background-image: url("../images/pro_3.png")
-#pro-4
-    .img_wrap
-        background-image: url("../images/pro_4.png")
-#pro-5
-    .img_wrap
-        background-image: url("../images/pro_5.png")
-#pro-6
-    .img_wrap
-        background-image: url("../images/pro_6.png")
-
-        
+#pro-1 .img_wrap
+    background-image: url("../images/pro_1.png")
+#pro-2 .img_wrap
+    background-image: url("../images/pro_2.png")
+#pro-3 .img_wrap
+    background-image: url("../images/pro_3.png")
+#pro-4 .img_wrap
+    background-image: url("../images/pro_4.png")
+#pro-5 .img_wrap
+    background-image: url("../images/pro_5.png")
+#pro-6 .img_wrap
+    background-image: url("../images/pro_6.png")
         
 footer
     position: absolute
@@ -334,14 +330,14 @@ footer
         position: absolute
         right: 30px
         top: 0px
-        transform: translate(0,-50%)
+        +transform(translate(0,-50%))
         background-color: $color_blue
         color: $color_grey
         text-align: center
         line-height: 50px
         cursor: pointer
-        border-radius: 50%
-        transition-duration: 0.3s
+        +border-radius(50%)
+        +transition(0.3s)
         &:hover
             background-color: $color_yellow
             color: $color_blue
@@ -357,6 +353,7 @@ footer
         position: absolute
         padding-top: 0px
         border: solid 1px $color_blue
+        background-color: rgba($color_grey,0.7)
         right: 0
         top: 44px
         display: none
@@ -370,7 +367,7 @@ footer
         display: block
         color: $color_grey
         text-align: left
-        transition-duration: 0.3s
+        +transition(0.3s)
     section
         min-height: auto
         padding-bottom: 50px
@@ -379,7 +376,7 @@ footer
         top: 0
         left: 0
         position: relative
-        transform: translate(0,0)
+        +transform(translate(0,0))
     section#main_profolio
         .container
             .img_wrap
@@ -389,10 +386,10 @@ footer
                 max-width: 96%
                 height: 300px
                 .black_mask
-                    opacity: 0.4
+                    +opacity(0.4)
                 .info_wrap
                     h3,p
-                        opacity: 1
+                        +opacity(1)
     section#page_profolio
         .container
             padding: 10px

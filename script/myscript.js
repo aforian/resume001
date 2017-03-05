@@ -10,7 +10,7 @@ $(document).ready(function(){
     })
     
     function navchange(){
-        if($(window).width()<=700){
+        if($(window).width()<=768){
            if($(window).scrollTop()>0){
             $(".nav_top").addClass("leavetop");
             }else{
