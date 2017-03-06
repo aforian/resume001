@@ -22,7 +22,6 @@ $(document).ready(function(){
         }
     }
     
-    
     // 導覽列點選滑動
     var nav_item = $(".nav_item a");
     $(".brand a").click(function(e){
@@ -51,7 +50,7 @@ $(document).ready(function(){
             $(this).toggleClass('active');
         })
     
-    
+    //首頁動態
     $("#home-frame").mousemove(function(e){
         var pagex = e.pageX, pagey = e.pageY;
         var frame_width = $("#home-frame").width();
@@ -59,9 +58,12 @@ $(document).ready(function(){
         var relX = pagex-frame_offset.left;
         var radio = relX/frame_width-1;
         console.log(radio);
-        $("#home_img1").css("transform","rotateY("+(radio*65-10)+"deg) translateY(-50%)");
-        $("#home_img2").css("transform","rotateY("+(radio*65-15)+"deg) translateY(-50%)");
-        $("#home_img3").css("transform","rotateY("+(radio*65-20)+"deg) translateY(-50%)");
+        if($(window).width()>768){
+            $("#home_img1").css("transform","rotateY("+(radio*65-10)+"deg) translateY(-50%)");
+            $("#home_img2").css("transform","rotateY("+(radio*65-15)+"deg) translateY(-50%)");
+            $("#home_img3").css("transform","rotateY("+(radio*65-20)+"deg) translateY(-50%)");
+        }
+        
     })
 
     $(".home_img").children('img').each(function(){
@@ -79,3 +81,31 @@ $(document).ready(function(){
         }, 600, 'easeInOutCubic');
     })
 })
+
+var profoliodata = [
+    {title:"童理心－畢業製作網站",
+     sub:"淡江大學資傳系104畢製小組網站",
+     url:"url('images/ian_pro_img1.png')"},
+    {title:"仿Hahow網站練習",
+     sub:"使用ajax與vue.js呈現資訊",
+     url:"url('images/ian_pro_img2.png')"},
+    {title:"印刷術主題網站",
+     sub:"使用bootstrap快速製作",
+     url:"url('images/ian_pro_img3.png')"},
+    {title:"自我介紹動畫網站",
+     sub:"滾軸製作動畫",
+     url:"url('images/ian_pro_img4.png')"},
+    {title:"動態天氣報告",
+     sub:"使用SVG製作動畫",
+     url:"url('images/ian_pro_img5.png')"},
+    {title:"模擬購物清單",
+     sub:"利用ajax進行非同步載入",
+     url:"url('images/ian_pro_img6.png')"},
+];
+
+var vm1 = new Vue({
+    el: "#section_profolio",
+    data:{
+        profolio_data: profoliodata
+    }
+});

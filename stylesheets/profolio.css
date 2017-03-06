@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* line 25, ../sass/profolio.sass */
 * {
   position: relative;
   font-size: 16px;
@@ -10,7 +9,6 @@
   box-sizing: border-box;
 }
 
-/* line 35, ../sass/profolio.sass */
 html, body {
   width: 100%;
   height: 100%;
@@ -18,7 +16,6 @@ html, body {
   padding: 0;
 }
 
-/* line 41, ../sass/profolio.sass */
 a {
   text-decoration: none;
   width: 100%;
@@ -29,27 +26,22 @@ a {
   transition: 0.3s;
 }
 
-/* line 47, ../sass/profolio.sass */
 h1, h2 {
   font-size: 33px;
 }
 
-/* line 49, ../sass/profolio.sass */
 h3, h4 {
   font-size: 23px;
 }
 
-/* line 51, ../sass/profolio.sass */
 p {
   font-size: 16px;
 }
 
-/* line 53, ../sass/profolio.sass */
 h2 {
   text-align: center;
   padding-bottom: 6px;
 }
-/* line 56, ../sass/profolio.sass */
 h2:after {
   content: "";
   width: 80px;
@@ -63,7 +55,6 @@ h2:after {
   transform: translateX(-50%);
 }
 
-/* line 63, ../sass/profolio.sass */
 #navbar {
   z-index: 100;
   position: fixed;
@@ -79,12 +70,10 @@ h2:after {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 74, ../sass/profolio.sass */
 #navbar .navbar-mid {
   max-width: 1280px;
 }
 
-/* line 76, ../sass/profolio.sass */
 .nav_icon {
   width: 40px;
   height: 40px;
@@ -93,7 +82,6 @@ h2:after {
   display: none;
   cursor: pointer;
 }
-/* line 83, ../sass/profolio.sass */
 .nav_icon nav_line, .nav_icon .line1, .nav_icon .line2, .nav_icon .line3 {
   position: absolute;
   top: 50%;
@@ -110,135 +98,107 @@ h2:after {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 89, ../sass/profolio.sass */
 .nav_icon .line1 {
   -moz-transform: translate(-50%, 450%);
   -ms-transform: translate(-50%, 450%);
   -webkit-transform: translate(-50%, 450%);
   transform: translate(-50%, 450%);
 }
-/* line 92, ../sass/profolio.sass */
 .nav_icon .line2 {
   -moz-transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%);
   -webkit-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
 }
-/* line 95, ../sass/profolio.sass */
 .nav_icon .line3 {
   -moz-transform: translate(-50%, -450%);
   -ms-transform: translate(-50%, -450%);
   -webkit-transform: translate(-50%, -450%);
   transform: translate(-50%, -450%);
 }
-/* line 99, ../sass/profolio.sass */
 .nav_icon.active .line1, .nav_icon.active .line2 {
   -moz-transform: translate(-50%, -50%) rotate(-45deg);
   -ms-transform: translate(-50%, -50%) rotate(-45deg);
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-/* line 101, ../sass/profolio.sass */
 .nav_icon.active .line3 {
   -moz-transform: translate(-50%, -50%) rotate(45deg);
   -ms-transform: translate(-50%, -50%) rotate(45deg);
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
   transform: translate(-50%, -50%) rotate(45deg);
 }
-/* line 104, ../sass/profolio.sass */
 .nav_icon.leavetop .line1, .nav_icon.leavetop .line2, .nav_icon.leavetop .line3 {
   background-color: #4B4D66;
 }
 
-/* line 107, ../sass/profolio.sass */
 .brand {
   display: inline-block;
   padding: 5px 20px;
   font-size: 23px;
   cursor: pointer;
 }
-/* line 112, ../sass/profolio.sass */
 .brand a {
   font-size: 23px;
   color: #4B4D66;
 }
-/* line 116, ../sass/profolio.sass */
 .brand:hover a {
   color: #EED788;
 }
 
-/* line 118, ../sass/profolio.sass */
 .nav_top {
   float: right;
   display: inline-block;
   padding-top: 10px;
   background-color: transparent;
 }
-/* line 123, ../sass/profolio.sass */
 .nav_top ul {
   font-size: 0;
   margin: 0;
   list-style: none;
 }
 
-/* line 128, ../sass/profolio.sass */
 .nav_item {
   font-size: initial;
   display: inline-block;
   padding: 0px 15px;
   border-right: solid 1px #4B4D66;
 }
-/* line 133, ../sass/profolio.sass */
 .nav_item a {
   color: #4B4D66;
 }
-/* line 136, ../sass/profolio.sass */
 .nav_item:hover a {
   color: #EED788;
 }
-/* line 138, ../sass/profolio.sass */
 .nav_item:last-child {
   border-right: solid 0px #E3E5F2;
 }
 
-/* line 141, ../sass/profolio.sass */
 #navbar.leavetop {
   color: #4B4D66;
   border-bottom: solid 1px rgba(75, 77, 102, 0.6);
   background-color: rgba(227, 229, 242, 0.6);
 }
 
-/* line 145, ../sass/profolio.sass */
 .nav_item.leavetop {
   border-color: #4B4D66;
 }
 
-/* line 147, ../sass/profolio.sass */
 .nav_link.leavetop {
   color: #4B4D66;
 }
 
-/* line 149, ../sass/profolio.sass */
 .nav_top.leavetop {
   background-color: rgba(227, 229, 242, 0.6);
   border-color: rgba(75, 77, 102, 0.6);
 }
 
-/* line 153, ../sass/profolio.sass */
-.container {
-  width: 100%;
-  max-width: 1280px;
-  font-size: 0px;
-}
-
-/* line 158, ../sass/profolio.sass */
 .img_wrap, .text_wrap {
   vertical-align: middle;
   font-size: initial;
   display: inline-block;
 }
 
-/* line 163, ../sass/profolio.sass */
 section {
   width: 100%;
   min-height: 100%;
@@ -246,40 +206,39 @@ section {
   padding-bottom: 10px;
 }
 
-/* line 169, ../sass/profolio.sass */
+.container {
+  width: 100%;
+  max-width: 1024px;
+  font-size: 0px;
+}
+
 section#main_profolio {
   background-color: #E3E5F2;
   color: #4B4D66;
 }
-/* line 172, ../sass/profolio.sass */
 section#main_profolio h2 {
   color: #6A97B4;
 }
-/* line 174, ../sass/profolio.sass */
 section#main_profolio h2:after {
   background-color: #6A97B4;
 }
-/* line 176, ../sass/profolio.sass */
 section#main_profolio .container {
   position: relative;
+  padding: 30px 10px;
   top: 0%;
   left: 50%;
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  width: 100%;
-  max-width: 900px;
-  padding: 30px 0;
   margin-bottom: 30px;
 }
-/* line 185, ../sass/profolio.sass */
 section#main_profolio .container .img_wrap {
   position: relative;
   margin: 0.5%;
-  max-width: 300px;
+  max-width: 350px;
   width: 32%;
-  height: 250px;
+  height: 300px;
   text-align: left;
   cursor: pointer;
   border: solid 10px #4B4D66;
@@ -292,14 +251,12 @@ section#main_profolio .container .img_wrap {
   -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
-/* line 197, ../sass/profolio.sass */
 section#main_profolio .container .img_wrap a {
   position: absolute;
   z-index: 10;
   width: 100%;
   height: 100%;
 }
-/* line 202, ../sass/profolio.sass */
 section#main_profolio .container .img_wrap .black_mask {
   width: 100%;
   height: 100%;
@@ -311,7 +268,6 @@ section#main_profolio .container .img_wrap .black_mask {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 208, ../sass/profolio.sass */
 section#main_profolio .container .img_wrap .info_wrap {
   position: absolute;
   width: 80%;
@@ -326,7 +282,6 @@ section#main_profolio .container .img_wrap .info_wrap {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 215, ../sass/profolio.sass */
 section#main_profolio .container .img_wrap .info_wrap h3, section#main_profolio .container .img_wrap .info_wrap p {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -338,7 +293,6 @@ section#main_profolio .container .img_wrap .info_wrap h3, section#main_profolio 
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 221, ../sass/profolio.sass */
 section#main_profolio .container .img_wrap:hover {
   -moz-transform: translate(-5px, -5px);
   -ms-transform: translate(-5px, -5px);
@@ -348,62 +302,31 @@ section#main_profolio .container .img_wrap:hover {
   -webkit-box-shadow: 8px 8px 9px rgba(0, 0, 0, 0.1);
   box-shadow: 8px 8px 9px rgba(0, 0, 0, 0.1);
 }
-/* line 224, ../sass/profolio.sass */
 section#main_profolio .container .img_wrap:hover .black_mask {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
   opacity: 0.4;
 }
-/* line 226, ../sass/profolio.sass */
 section#main_profolio .container .img_wrap:hover .info_wrap {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* line 228, ../sass/profolio.sass */
 section#main_profolio .container .img_wrap:hover h3, section#main_profolio .container .img_wrap:hover p {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 230, ../sass/profolio.sass */
-section#main_profolio #pro-img1 {
-  background-image: url("../images/ian_pro_img1.png");
-}
-/* line 232, ../sass/profolio.sass */
-section#main_profolio #pro-img2 {
-  background-image: url("../images/ian_pro_img2.png");
-}
-/* line 234, ../sass/profolio.sass */
-section#main_profolio #pro-img3 {
-  background-image: url("../images/ian_pro_img3.png");
-}
-/* line 236, ../sass/profolio.sass */
-section#main_profolio #pro-img4 {
-  background-image: url("../images/ian_pro_img4.png");
-}
-/* line 238, ../sass/profolio.sass */
-section#main_profolio #pro-img5 {
-  background-image: url("../images/ian_pro_img5.png");
-}
-/* line 240, ../sass/profolio.sass */
-section#main_profolio #pro-img6 {
-  background-image: url("../images/ian_pro_img6.png");
-}
 
-/* line 243, ../sass/profolio.sass */
 section#page_profolio {
   background-color: #E3E5F2;
   color: #4B4D66;
 }
-/* line 246, ../sass/profolio.sass */
 section#page_profolio h2 {
   color: #6A97B4;
 }
-/* line 248, ../sass/profolio.sass */
 section#page_profolio h2:after {
   background-color: #6A97B4;
 }
-/* line 250, ../sass/profolio.sass */
 section#page_profolio .container {
   width: 100%;
   max-width: 930px;
@@ -418,22 +341,18 @@ section#page_profolio .container {
   top: 0%;
   position: relative;
 }
-/* line 258, ../sass/profolio.sass */
 section#page_profolio .container img {
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 261, ../sass/profolio.sass */
 section#page_profolio .container .bread {
   position: absolute;
   left: 30px;
   top: -10px;
 }
-/* line 265, ../sass/profolio.sass */
 section#page_profolio .container .bread a {
   color: #6A97B4;
 }
-/* line 267, ../sass/profolio.sass */
 section#page_profolio .container .bread a:before {
   content: "<<";
   position: relative;
@@ -443,15 +362,12 @@ section#page_profolio .container .bread a:before {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 273, ../sass/profolio.sass */
 section#page_profolio .container .bread:hover a {
   color: #4B4D66;
 }
-/* line 275, ../sass/profolio.sass */
 section#page_profolio .container .bread:hover a:before {
   left: -5px;
 }
-/* line 277, ../sass/profolio.sass */
 section#page_profolio .container .more {
   position: relative;
   left: 50%;
@@ -469,19 +385,15 @@ section#page_profolio .container .more {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 287, ../sass/profolio.sass */
 section#page_profolio .container .more a {
   color: #4B4D66;
 }
-/* line 289, ../sass/profolio.sass */
 section#page_profolio .container .more:hover {
   background-color: #4B4D66;
 }
-/* line 291, ../sass/profolio.sass */
 section#page_profolio .container .more:hover a {
   color: #E3E5F2;
 }
-/* line 293, ../sass/profolio.sass */
 section#page_profolio .container .img_wrap {
   width: 100%;
   height: 300px;
@@ -493,37 +405,30 @@ section#page_profolio .container .img_wrap {
   background-position: center;
 }
 
-/* line 301, ../sass/profolio.sass */
 #pro-1 .img_wrap {
   background-image: url("../images/pro_1.png");
 }
 
-/* line 303, ../sass/profolio.sass */
 #pro-2 .img_wrap {
   background-image: url("../images/pro_2.png");
 }
 
-/* line 305, ../sass/profolio.sass */
 #pro-3 .img_wrap {
   background-image: url("../images/pro_3.png");
 }
 
-/* line 307, ../sass/profolio.sass */
 #pro-4 .img_wrap {
   background-image: url("../images/pro_4.png");
 }
 
-/* line 309, ../sass/profolio.sass */
 #pro-5 .img_wrap {
   background-image: url("../images/pro_5.png");
 }
 
-/* line 311, ../sass/profolio.sass */
 #pro-6 .img_wrap {
   background-image: url("../images/pro_6.png");
 }
 
-/* line 314, ../sass/profolio.sass */
 footer {
   position: absolute;
   width: 100%;
@@ -533,14 +438,12 @@ footer {
   color: #E3E5F2;
   background-color: #6A97B4;
 }
-/* line 322, ../sass/profolio.sass */
 footer p {
   margin: 0;
   padding: 0 10px;
   font-size: 14px;
   max-width: 1280px;
 }
-/* line 327, ../sass/profolio.sass */
 footer .backtop {
   width: 50px;
   height: 50px;
@@ -564,26 +467,22 @@ footer .backtop {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 341, ../sass/profolio.sass */
 footer .backtop:hover {
   background-color: #EED788;
   color: #4B4D66;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 346, ../sass/profolio.sass */
   #navbar {
     padding: 2px 5px;
   }
 
-  /* line 348, ../sass/profolio.sass */
   .nav_icon {
     float: right;
     display: inline-block;
     padding-top: 0px;
   }
 
-  /* line 352, ../sass/profolio.sass */
   .nav_top {
     position: absolute;
     padding-top: 0px;
@@ -593,12 +492,10 @@ footer .backtop:hover {
     top: 44px;
     display: none;
   }
-  /* line 360, ../sass/profolio.sass */
   .nav_top ul {
     padding: 0;
   }
 
-  /* line 362, ../sass/profolio.sass */
   .nav_item {
     font-size: initial;
     padding: 10px 30px;
@@ -613,13 +510,11 @@ footer .backtop:hover {
     transition: 0.3s;
   }
 
-  /* line 371, ../sass/profolio.sass */
   section {
     min-height: auto;
     padding-bottom: 50px;
   }
 
-  /* line 374, ../sass/profolio.sass */
   .container {
     padding: 0px 10px;
     top: 0;
@@ -631,26 +526,28 @@ footer .backtop:hover {
     transform: translate(0, 0);
   }
 
-  /* line 382, ../sass/profolio.sass */
   section#main_profolio .container .img_wrap {
-    margin: 10px;
+    margin: 10px 5px;
     padding: 0 0px;
-    width: 96%;
-    max-width: 96%;
+    width: calc(100% - 10px);
+    max-width: 100%;
     height: 300px;
   }
-  /* line 388, ../sass/profolio.sass */
+  section#main_profolio .container .img_wrap:hover {
+    -moz-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+  }
   section#main_profolio .container .img_wrap .black_mask {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
     opacity: 0.4;
   }
-  /* line 391, ../sass/profolio.sass */
   section#main_profolio .container .img_wrap .info_wrap h3, section#main_profolio .container .img_wrap .info_wrap p {
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
 
-  /* line 394, ../sass/profolio.sass */
   section#page_profolio .container {
     padding: 10px;
   }
