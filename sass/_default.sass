@@ -24,16 +24,17 @@ $sub_size: 14px
     position: relative
     font-size: $text_size
     font-weight: 400
-    font-family: 'Open Sans', sans-serif, 黑體, "微軟正黑體"
+    font-family: 'Open Sans', sans-serif, "微軟正黑體", "蘋方-繁"
     +box-sizing(border-box)
-    //debug
-    //border: solid 1px black
-
+    
 html,body
     width: 100%
     height: 100%
     margin: 0
     padding: 0
+
+body
+    overflow-x: hidden
 
 a
     text-decoration: none
@@ -64,89 +65,84 @@ h2
     width: 100%
     max-width: 100%
     padding: 2px 30px
-    border-bottom: solid 1px $color_blue
-    color: $color_blue
     vertical-align: bottom
     +transition(0.3s)
     .navbar-mid
         max-width: 1280px
-.nav_icon
-    width: 40px
-    height: 40px
-    margin-top: 1px
-    margin-right: 10px
-    display: none
-    cursor: pointer
-    nav_line
-        +ab_center
-        width: 30px
-        height: 2px
-        background-color: $color_blue
-        +transition(0.3s)
-    .line1
-        +transform(translate(-50%,450%))
-        @extend nav_line
-    .line2
-        +transform(translate(-50%,0%))
-        @extend nav_line
-    .line3
-        +transform(translate(-50%,-450%))
-        @extend nav_line
-    &.active
-        .line1,.line2
-            +transform(translate(-50%,-50%) rotate(-45deg))
-        .line3
-            +transform(translate(-50%,-50%) rotate(45deg))
-    &.leavetop
-        .line1, .line2, .line3
-            background-color: $color_blue
-            
-.brand
-    display: inline-block
-    padding: 5px 20px
-    font-size: $subtitle_size
-    cursor: pointer
-    a
+    .brand
+        float: left
+        padding: 5px 20px
         font-size: $subtitle_size
-        color: $color_blue
-    &:hover
-        a
-            color: $color_yellow
-.nav_top
-    float: right
-    display: inline-block
-    padding-top: 10px
-    background-color: transparent
-    ul
-        font-size: 0
-        margin: 0
-        list-style: none
-    
-.nav_item
-    font-size: initial
-    display: inline-block
-    padding: 0px 15px
-    border-right: solid 1px $color_blue
-    a
-        color: $color_blue
-    &:hover
-        a
-            color: $color_yellow
-    &:last-child
-        border-right: solid 0px $color_grey
+        cursor: pointer
+        .nav_link
+            font-size: $subtitle_size
+            &:hover
+                color: $color_yellow
+    .nav_icon
+        width: 40px
+        height: 40px
+        margin-top: 1px
+        margin-right: 10px
+        display: none
+        cursor: pointer
+        nav_line
+            +ab_center
+            width: 30px
+            height: 2px
+            +transition(0.3s)
+        &:hover
+            nav_line
+                background-color: $color_yellow
+        .line1
+            +transform(translate(-50%,450%))
+            @extend nav_line
+        .line2
+            +transform(translate(-50%,0%))
+            @extend nav_line
+        .line3
+            +transform(translate(-50%,-450%))
+            @extend nav_line
+        &.active
+            .line1,.line2
+                +transform(translate(-50%,-50%) rotate(-45deg))
+            .line3
+                +transform(translate(-50%,-50%) rotate(45deg))
+        
+    .nav_top
+        float: right
+        display: inline-block
+        padding-top: 10px
+        background-color: transparent
+        ul
+            font-size: 0
+            margin: 0
+            list-style: none
+        .nav_item
+            font-size: initial
+            display: inline-block
+            padding: 0px 15px
+            &:last-child
+                border-right: solid 0px
+            
         
 #navbar.leavetop
     color: $color_blue
     border-bottom: solid 1px rgba($color_blue,0.6)
     background-color: rgba($color_grey,0.6)
-.nav_item.leavetop
-    border-color: $color_blue
-.nav_link.leavetop
-    color: $color_blue
-.nav_top.leavetop
-    background-color: rgba($color_grey,0.6)
-    border-color: rgba($color_blue,0.6)
-    
+    .brand
+        .nav_link
+            color: $color_blue
+            &:hover
+                color: $color_yellow
+    .nav_top
+        border-color: rgba($color_blue,0.6)
+        .nav_item
+            border-color: $color_blue
+            &:hover
+                .nav_link
+                    color: $color_yellow
+            
+
 .img_wrap,.text_wrap
     vertical-align: middle
     font-size: initial
@@ -154,7 +150,7 @@ h2
  
 section
     width: 100%
-    min-height: 100%
+    min-height: 100vh
     padding-top: 40px
     padding-bottom: 10px
     

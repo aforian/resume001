@@ -18,7 +18,6 @@ var profoliodata = [
      sub:"利用ajax進行非同步載入",
      url:"url('images/ian_pro_img6.png')"},
 ];
-
 var vm1 = new Vue({
     el: "#main_profolio",
     data:{
@@ -26,6 +25,14 @@ var vm1 = new Vue({
     }
 });
 
+window.addEventListener('scroll', function(e) {
+    vm2.leave_top = (document.body.scrollTop>0)?1:0;
+    if(document.body.clientWidth>=768){
+        vm2.mobile_leave_top = (document.body.scrollTop>0)?1:0;
+    }else{
+        vm2.mobile_leave_top = 0;
+    }
+});
 var vm2 = new Vue({
     el: "#navbar",
     data: {
@@ -34,35 +41,13 @@ var vm2 = new Vue({
             {title:"作品集", url:"index.html#section_profolio"},
             {title:"專業技能", url:"index.html#section_skill"},
             {title:"聯絡資訊", url:"index.html#section_contact"},
-        ]
+        ],
+        leave_top: 0,
+        mobile_leave_top: 0,
     }
 })
 
-
 $(document).ready(function(){
-    //導覽列捲動
-    $(window).scroll(function(){
-        if($(window).scrollTop()>0){
-            $("#navbar,.nav_icon,.nav_item,.nav_link,.next-page").addClass("leavetop");
-        }else{
-            $("#navbar,.nav_icon,.nav_item,.nav_link,.next-page").removeClass("leavetop");
-        }
-        navchange();
-    })
-    //手機導覽列
-    function navchange(){
-        if($(window).width()<=768){
-           if($(window).scrollTop()>0){
-            $(".nav_top").addClass("leavetop");
-            }else{
-                $(".nav_top").removeClass("leavetop");
-            } 
-        }else{
-            $(".nav_top").show();
-            $(".nav_top").removeClass("leavetop");
-        }
-    }
-    
     $(".nav_icon").click(function(){
             $(".nav_top").fadeToggle(300);
             $(this).toggleClass('active');

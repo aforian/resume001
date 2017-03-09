@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-    <header id="navbar">
+    <header id="navbar" v-bind:class="leave_top?'leavetop':''">
         <div class="navbar-mid">
             <div class="brand"><a class="nav_link" href="index.html">IANKC</a></div>
             <div class="nav_icon">
@@ -24,7 +24,7 @@
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
-            <nav class="nav_top">
+            <nav class="nav_top" v-bind:class="leave_top?'leavetop':''">
                 <ul>
                     <li class="nav_item" v-for="n in nav_data"><a class="nav_link" :href="n.url">{{n.title}}</a></li>
                 </ul>

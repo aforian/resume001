@@ -1,6 +1,41 @@
 @import compass/css3
 @import _default
 
+#navbar
+    border-bottom: solid 1px $color_blue
+    color: $color_blue
+    .brand
+        .nav_link
+            color: $color_blue
+    .nav_icon
+        nav_line
+            background-color: $color_blue
+    .nav_top
+        background-color: transparent
+        .nav_item
+            border-right: solid 1px $color_blue
+            .nav_link
+                color: $color_blue
+            &:hover
+                .nav_link
+                    color: $color_yellow
+            &:last-of-type
+                border-right: solid 0px $color_grey
+            
+#navbar.leavetop
+    .nav_icon
+        .line1,.line2,.line3
+            background-color: $color_blue
+    .nav_top
+        background-color: transparent
+        .nav_item
+            border-color: $color_blue
+            .nav_link
+                color: $color_blue
+            &:hover
+                .nav_link
+                    color: $color_yellow
+    
 section#main_profolio
     background-color: $color_grey
     color: $color_blue
@@ -119,20 +154,20 @@ section#page_profolio
             +border-radius(4px)
             background-size: cover
             background-position: center
-            
+
 #pro-1 .img_wrap
-    background-image: url("../images/pro_1.png")
+    background-image: url(../images/pro_1.png)
 #pro-2 .img_wrap
-    background-image: url("../images/pro_2.png")
+    background-image: url(../images/pro_2.png)
 #pro-3 .img_wrap
-    background-image: url("../images/pro_3.png")
+    background-image: url(../images/pro_3.png)
 #pro-4 .img_wrap
-    background-image: url("../images/pro_4.png")
+    background-image: url(../images/pro_4.png)
 #pro-5 .img_wrap
-    background-image: url("../images/pro_5.png")
+    background-image: url(../images/pro_5.png)
 #pro-6 .img_wrap
-    background-image: url("../images/pro_6.png")
-        
+    background-image: url(../images/pro_6.png)            
+            
 footer
     position: absolute
     width: 100%
@@ -167,29 +202,33 @@ footer
 @media screen and (max-width: 768px)
     #navbar
         padding: 2px 5px
-    .nav_icon
-        float: right
-        display: inline-block
-        padding-top: 0px
-    .nav_top
-        position: absolute
-        padding-top: 0px
-        border: solid 1px $color_blue
-        background-color: rgba($color_grey,0.7)
-        right: 0
-        top: 44px
-        display: none
-        ul
-            padding: 0
-    .nav_item
-        font-size: initial
-        padding: 10px 30px
-        border: 0px
-        margin: 5px 0
-        display: block
-        color: $color_grey
-        text-align: left
-        +transition(0.3s)
+        .nav_icon
+            float: right
+            display: inline-block
+            padding-top: 0px
+        .nav_top
+            background-color: rgba($color_grey,0.6)
+            display: none
+            position: absolute
+            padding-top: 0px
+            border: solid 1px $color_blue
+            right: 0
+            top: 44px
+            +transition(0.4s)
+            ul
+                padding: 0
+            .nav_item
+                font-size: initial
+                padding: 10px 30px
+                border: 0px
+                margin: 5px 0
+                display: block
+                color: $color_grey
+                text-align: left
+                +transition(0.3s)
+    #navbar.leavetop 
+        .nav_top
+            background-color: rgba($color_grey,0.6)
     section
         min-height: auto
         padding-bottom: 50px

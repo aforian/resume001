@@ -1,52 +1,41 @@
 @import compass/css3
 @import _default  
-$color_blue: #4B4D66
-$color_yellow: #EED788
-$color_water: #6A97B4
-$color_grey: #E3E5F2
-$color_water_dark: #66879C
-$color_white: #eee
-$title_size: 33px
-$subtitle_size: 23px
-$text_size: 16px
-$sub_size: 14px
     
 #navbar
     border-bottom: solid 1px $color_grey
     color: $color_white
-    .navbar-mid
-        max-width: 1280px
-.nav_icon
-    .line1, .line2, .line3
-        background-color: $color_grey
-    &.leavetop
-        .line1, .line2, .line3
+    .brand
+        .nav_link
+            color: $color_white
+    .nav_icon
+        nav_line
+            background-color: $color_grey
+    .nav_top
+        background-color: transparent
+        .nav_item
+            border-right: solid 1px $color_grey
+            .nav_link
+                color: $color_grey
+            &:hover
+                .nav_link
+                    color: $color_yellow
+            &:last-of-type
+                border-right: solid 0px $color_grey
+#navbar.leavetop
+    .nav_icon
+        .line1,.line2,.line3
             background-color: $color_blue
+    .nav_top
+        background-color: transparent
+        .nav_item
+            border-color: $color_blue
+            .nav_link
+                color: $color_blue
+            &:hover
+                .nav_link
+                    color: $color_yellow
+
             
-.brand
-    display: inline-block
-    padding: 5px 20px
-    font-size: $subtitle_size
-    cursor: pointer
-    a
-        font-size: $subtitle_size
-        color: $color_grey
-    &:hover
-        a
-            color: $color_yellow
-.nav_top
-    background-color: transparent
-    
-.nav_item
-    border-right: solid 1px $color_grey
-    a
-        color: $color_grey
-    &:hover
-        a
-            color: $color_yellow
-    &:last-of-type
-        border-right: solid 0px $color_grey
-    
 .next-page
     position: absolute
     width: 80px
@@ -356,31 +345,32 @@ footer
         font-size: 24px
     #navbar
         padding: 2px 5px
-    .nav_icon
-        float: right
-        display: inline-block
-        padding-top: 0px
-    .nav_top
-        display: none
-        position: absolute
-        padding-top: 0px
-        border: solid 1px $color_grey
-        background-color: rgba($color_blue,0.7)
-        right: 0
-        top: 44px
-        ul
-            padding: 0
-        &.leavetop
+        .nav_icon
+            float: right
+            display: inline-block
+            padding-top: 0px
+        .nav_top
             display: none
-    .nav_item
-        font-size: initial
-        padding: 10px 30px
-        border: 0px
-        margin: 5px 0
-        display: block
-        color: $color_grey
-        text-align: left
-        +transition(0.3s)
+            position: absolute
+            padding-top: 0px
+            border: solid 1px $color_grey
+            right: 0
+            top: 44px
+            +transition(0.4s)
+            ul
+                padding: 0
+            .nav_item
+                font-size: initial
+                padding: 10px 30px
+                border: 0px
+                margin: 5px 0
+                display: block
+                color: $color_grey
+                text-align: left
+                +transition(0.3s)
+    #navbar.leavetop 
+        .nav_top
+            background-color: rgba($color_grey,0.6)
     section
         min-height: auto
         padding-bottom: 50px

@@ -1,0 +1,49 @@
+section#section_home .text_wrap{
+    -skrollr-animation-name: home-text;
+}
+@-skrollr-keyframes home-text{
+    0   {transform: translate(0%,0); opacity: 1}
+    600 {transform: translate(100%,0); opacity: 0}
+}
+
+section#section_intro .text_wrap, section#section_intro .img_wrap{
+    -skrollr-animation-name: intro-text;
+}
+@-skrollr-keyframes intro-text{
+    bottom-top {transform: translate(0%,10%); opacity: 0}
+    center {transform: translate(0%,0); opacity: 1}
+}
+
+section#section_profolio .container{
+    -skrollr-animation-name: profolio-text;
+}
+@-skrollr-keyframes profolio-text{
+    bottom-top {transform: translate(0%,-40%);}
+    center-top {transform: translate(-50%,-40%);}
+    center-bottom {transform: translate(-50%,-40%);}
+    top-bottom {transform: translate(-100%,-40%);}
+}
+
+section#section_skill .img_wrap:first-child .text_wrap{
+    -skrollr-animation-name: skill-text1;
+}
+@-skrollr-keyframes skill-text1{
+    bottom-top {transform: translate(20%,0%); opacity: 0}
+    center {transform: translate(0%,0%); opacity: 1}
+}
+
+section#section_skill .img_wrap:last-child .text_wrap{
+    -skrollr-animation-name: skill-text2;
+}
+@-skrollr-keyframes skill-text2{
+    bottom-top {transform: translate(-20%,0%); opacity: 0}
+    center {transform: translate(0%,0%); opacity: 1}
+}
+
+section#section_contact .container{
+    -skrollr-animation-name: contact-text2;
+}
+@-skrollr-keyframes contact-text2{
+    bottom-top {transform: translate(-50%,-60%); opacity: 0}
+    center {transform: translate(-50%,-50%); opacity: 1}
+}
