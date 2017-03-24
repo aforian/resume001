@@ -34,6 +34,13 @@ $(document).ready(function(){
             $("#home_img3").css("transform","rotateY("+(radio*65-20)+"deg) translateY(-50%)");
         }
     })
+    $(window).resize(function(){
+        if($(window).width()<768){
+            $("#home_img1").css("transform","rotateY(-40deg) translateY(-50%)");
+            $("#home_img2").css("transform","rotateY(-40deg) translateY(-30%)");
+            $("#home_img3").css("transform","rotateY(-40deg) translateY(-10%)");
+        }
+    })
     $(".home_img").children('img').each(function(){
         $(this).mouseover(function(){
             $(".home_img img").not(this).stop().fadeTo(100,0.4);
