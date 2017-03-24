@@ -2,8 +2,8 @@ section#section_home .text_wrap{
     -skrollr-animation-name: home-text;
 }
 @-skrollr-keyframes home-text{
-    0   {transform: translate(0%,0); opacity: 1}
-    600 {transform: translate(100%,0); opacity: 0}
+    0   {opacity: 1}
+    600 {opacity: 0}
 }
 
 section#section_intro .text_wrap, section#section_intro .img_wrap{
@@ -46,15 +46,4 @@ section#section_contact .container{
 @-skrollr-keyframes contact-text2{
     bottom-top {transform: translate(-50%,-60%); opacity: 0}
     center {transform: translate(-50%,-50%); opacity: 1}
-}
-
-
-@media screen and (max-width: 768px){
-  section#section_home .text_wrap{
-    -skrollr-animation-name: home-text;
-  }
-  @-skrollr-keyframes home-text{
-    0   {transform: translate(0%,-90%); opacity: 1}
-    100 {transform: translate(0%,-90%); opacity: 1}
-  }
 }
